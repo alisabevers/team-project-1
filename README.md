@@ -1,6 +1,6 @@
 # team-project-1
 
-## Project Requirements
+## Project Requirements:
 
 1. At least two server side APIs! (We will have a list of possible resources on resources as well!)
 2. Use a CSS framework (Bootstrap allowed!)
