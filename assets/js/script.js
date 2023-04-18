@@ -1,13 +1,14 @@
 var APIKey = "97CtSZ/oPnIXq150EVo/iQ==wz5zY0YtY761DSyg";
-var searchInput = document.querySelector('.searchInput');
-var searchbtn = document.querySelector('.searchbtn');
+var searchInput = document.querySelector('.searchInput','#search-container');
+var searchbtn = document.querySelector('.searchbtn','#search-container');
 
 searchbtn.addEventListener('click', function(event){
     event.preventDefault();
+    console.log("hi");
     if(searchInput.value == ""){
         return;
     }
- userInput=searchInput.value;
+ userInput = searchInput.value;
  console.log(userInput);
 
 var userInput;
