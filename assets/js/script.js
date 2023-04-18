@@ -2,7 +2,6 @@ var APIKey = "97CtSZ/oPnIXq150EVo/iQ==wz5zY0YtY761DSyg";
 var searchInput = document.querySelector('.searchInput');
 var searchbtn = document.querySelector('.searchbtn');
 
-
 searchbtn.addEventListener('click', function(event){
     event.preventDefault();
     if(searchInput.value == ""){
