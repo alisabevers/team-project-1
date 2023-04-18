@@ -11,28 +11,28 @@
 <body>
     <nav class="navbar" style="background-color: #e3f2fd;">
         PrepPal
-        <span class="navbar-text">
-            ...some slogan will go here
+        <span id="navbar-text">
+            your meal-prepping pal
         </span>
     </nav>
     <div class="container">
-        <div class="row">
-            <div class="card col-4">
-                <div class="card-body">
-                  This is some text within a card body.
+        <div id="websiteDirections" class="col">
+            <p id="howToUse">Welcome to PrepPal, your best meal-prepping pal. Search for any meal, and we'll tell you all about its nutritional value, the ingredients you'll need, and how to make it!</p>
+        </div>
+        <div class="container row card">
+            <div class="card-body">
+                <div class="col-4">
+                    <form class="d-flex" role="search">
+                        <input class="searchInput form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn searchbtn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="mealElements">
+                    <button type="button" class="btn btn-outline-secondary col-6">Secondary</button>
                 </div>
             </div>
-            <div class="card col-8">
-                <form class="d-flex" role="search">
-                    <input class="searchInput form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn searchbtn btn-outline-success" type="submit">Search</button>
-                  </form>
-            <div class="card-body">
-                This is some text within a card body.
-            </div>
-            </div>
         </div>
-      </div>
+    </div>
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
