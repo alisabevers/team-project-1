@@ -3,7 +3,19 @@
     padding-left: 3vb;
 }
 
-.navbar-text {
+#navbar-text {
     font-size: 25px;
     padding-right: 3vb;
+}
+
+#websiteDirections {
+    margin-top: 5vb;
+}
+
+#howToUse {
+    font-size: 25px;
+}
+
+.mealElements {
+    margin-top: 3vb;
 }
