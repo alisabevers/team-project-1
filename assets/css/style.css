@@ -7,3 +7,34 @@
     font-size: 25px;
     padding-right: 3vb;
 }
+
+.groupButtons {
+    color: blue;
+
+}
+
+#mealButton1 {
+    padding-left: 20;
+    color: aqua;
+    background-color: darkslategrey;
+}
+
+#mealButton2 {
+    color: aqua;
+    background-color: darkslategrey;
+}
+
+#mealButton3 {
+    color: aqua;
+    background-color: darkslategrey;
+}
+
+#mealButton4 {
+    color: aqua;
+    background-color: darkslategrey;
+}
+
+#mealButton5 {
+    color: aqua;
+    background-color: darkslategrey;
+}
