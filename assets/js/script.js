@@ -13,6 +13,10 @@ fetch (recipeQueryURL, {
     console.log(data);
 })
 });
+
+// 
+
+
 var searchInput = document.querySelector('.searchInput');
 var searchbtn = document.querySelector('.searchbtn');
 
