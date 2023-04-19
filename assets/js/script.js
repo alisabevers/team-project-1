@@ -14,7 +14,8 @@ var userInput;
 var recipeQueryURL = "https://api.api-ninjas.com/v1/recipe?query=" + userInput;
 var nutritionQueryURL = "https://api.api-ninjas.com/v1/nutrition?query=" + userInput;
 var mealButtons = document.querySelector(".mealElements");
- 
+
+
 // fetch call for ingredients and instructions
 fetch (recipeQueryURL, {
     headers: {'X-Api-Key': APIKey}
@@ -27,12 +28,26 @@ fetch (recipeQueryURL, {
     }
     console.log(data);
     for (var i = 0; i < data.length; i++) {
+        var popUpContent = data[i].ingredients + data[i].instructions;
         var mealBtn = document.createElement("button");
         mealBtn.textContent = data[i].title;
         mealBtn.type = "button";
         mealBtn.className = " list-group-item btn btn-outline-secondary col-6";
+        mealBtn.setAttribute("data-bs-toggle", "popover");
+        mealBtn.setAttribute("data-bs-title", data[i].title);
+        mealBtn.setAttribute("data-bs-content", popUpContent);
         mealButtons.appendChild(mealBtn);
     }
+    // function to create the pop-up when clicking the mealBtns
+    var popUp = function() {
+        'use strict'
+        document.querySelectorAll('[data-bs-toggle="popover"]')
+        .forEach(popover => {
+        new bootstrap.Popover(popover)
+    })
+    };
+    popUp();
+
     console.log(data[0].ingredients);
     console.log(data[0].instructions);
 });
