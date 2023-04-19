@@ -13,7 +13,8 @@ searchbtn.addEventListener('click', function(event){
 var userInput;
 var recipeQueryURL = "https://api.api-ninjas.com/v1/recipe?query=" + userInput;
 var nutritionQueryURL = "https://api.api-ninjas.com/v1/nutrition?query=" + userInput;
-
+var mealButtons = document.querySelector(".mealElements");
+ 
 // fetch call for ingredients and instructions
 fetch (recipeQueryURL, {
     headers: {'X-Api-Key': APIKey}
@@ -25,6 +26,13 @@ fetch (recipeQueryURL, {
         return;
     }
     console.log(data);
+    for (var i = 0; i < data.length; i++) {
+        var mealBtn = document.createElement("button");
+        mealBtn.textContent = data[i].title;
+        mealBtn.type = "button";
+        mealBtn.className = "btn btn-outline-secondary col-6";
+        mealButtons.appendChild(mealBtn);
+    }
     console.log(data[0].ingredients);
     console.log(data[0].instructions);
 })
