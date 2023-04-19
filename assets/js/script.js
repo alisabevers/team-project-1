@@ -30,12 +30,14 @@ fetch (recipeQueryURL, {
         var mealBtn = document.createElement("button");
         mealBtn.textContent = data[i].title;
         mealBtn.type = "button";
-        mealBtn.className = "btn btn-outline-secondary col-6";
+        mealBtn.className = " list-group-item btn btn-outline-secondary col-6";
         mealButtons.appendChild(mealBtn);
     }
     console.log(data[0].ingredients);
     console.log(data[0].instructions);
-})
+});
+
+
 });
 
 // fetch call for nutritional value of the selected meal
