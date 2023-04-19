@@ -4,8 +4,10 @@
 }
 
 #navbar-text {
-    font-size: 25px;
+    font-size: 20px;
     padding-right: 3vb;
+    color: rgb(234, 63, 72);
+    padding-top: 110px;
 }
 
 #websiteDirections {
@@ -18,4 +20,16 @@
 
 .mealElements {
     margin-top: 3vb;
+}
+
+#navId {
+    justify-content: left;
+    
+
+}
+
+.list-group-item {
+    border-style: solid;
+    color: rgb(13, 51, 70) ;
+    background-color: #e3f2fd;
 }
