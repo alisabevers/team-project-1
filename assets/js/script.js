@@ -8,7 +8,7 @@ document.addEventListener("click", function(event) {
         console.log(event.target.textContent);
         nutritionAPI(event.target.textContent);
     }
-})
+}) 
 
 // fetch call for ingredients and instructions
 function recipeAPI(userInput) {
