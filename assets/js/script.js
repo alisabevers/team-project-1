@@ -11,6 +11,7 @@ document.addEventListener("click", function(event) {
     }
 })
 
+
 function recipeAPI(userInput) {
     var recipeQueryURL = "https://api.api-ninjas.com/v1/recipe?query=" + userInput;
     // fetch call for ingredients and instructions
