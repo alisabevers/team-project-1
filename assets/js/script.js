@@ -27,6 +27,8 @@ fetch (recipeQueryURL, {
         return;
     }
     console.log(data);
+    
+    mealButtons.innerHTML= "";
     for (var i = 0; i < data.length; i++) {
         var mealBtn = document.createElement("button");
         var popUpContent = "You will need: " + data[i].ingredients + "Preparation: " + data[i].instructions;
