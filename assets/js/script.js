@@ -31,7 +31,7 @@ fetch (recipeQueryURL, {
         var popUpContent = "You will need: " + data[i].ingredients + "Preparation: " + data[i].instructions;
         mealBtn.textContent = data[i].title;
         mealBtn.type = "button";
-        mealBtn.className = "mealsName list-group-item btn btn-outline-secondary col-6";
+        mealBtn.className = "mealsName list-group-item btn btn-outline-secondary col-12 col-lg-6";
         mealBtn.setAttribute("data-bs-custom-class", "custom-popup");
         mealBtn.setAttribute("data-bs-toggle", "popover");
         mealBtn.setAttribute("data-bs-title", data[i].title);
