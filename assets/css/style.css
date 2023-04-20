@@ -41,3 +41,29 @@
     --bs-popover-body-padding-x: 1rem;
     --bs-popover-body-padding-y: .5rem;
 }
+.card{
+    padding: 0.5px;
+    border: 2px;
+}
+
+.card-title{
+    font-family: 'Nunito Sans', sans-serif;
+    color:rgb(234, 63, 72);
+}
+
+.card-text{
+    font-family: 'Nunito Sans', sans-serif;
+    color:rgb(234, 63, 72);
+}
+
+.nutrition{
+    font-family:'Nunito Sans', sans-serif;
+    color:rgb(234, 63, 72);
+}
+
+.py-5{
+    background-color: rgb(234, 63, 72);
+}
+.searchInput{
+    width: 90%;
+}
