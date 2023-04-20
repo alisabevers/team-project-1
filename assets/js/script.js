@@ -60,6 +60,7 @@ fetch (recipeQueryURL, {
 
 function nutritionAPI(userInput) {
     var nutritionQueryURL = "https://api.api-ninjas.com/v1/nutrition?query=" + userInput;
+
     // fetch call for nutritional value of the selected meal
 fetch (nutritionQueryURL, {
     headers: {'X-Api-Key': APIKey}
@@ -86,4 +87,4 @@ fetch (nutritionQueryURL, {
     // console.log(nutrition[i].serving_size_g);
 })
 });
-})
+};
