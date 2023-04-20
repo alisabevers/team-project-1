@@ -3,7 +3,6 @@ var searchInput = document.querySelector('.searchInput');
 var searchbtn = document.querySelector('.searchbtn');
 var mealButtons = document.querySelector(".mealElements");
 var nutritionEl = document.querySelector(".nutrition");
-
 document.addEventListener("click", function(event) {
     if (event.target.className.includes("mealsName")) {
         console.log(event.target.textContent);
@@ -27,6 +26,7 @@ fetch (recipeQueryURL, {
     
     mealButtons.innerHTML= "";
     for (var i = 0; i < data.length; i++) {
+        var popUpContent = data[i].ingredients + data[i].instructions;
         var mealBtn = document.createElement("button");
         var popUpContent = "You will need: " + data[i].ingredients + "Preparation: " + data[i].instructions;
         mealBtn.textContent = data[i].title;
@@ -36,7 +36,6 @@ fetch (recipeQueryURL, {
         mealBtn.setAttribute("data-bs-toggle", "popover");
         mealBtn.setAttribute("data-bs-title", data[i].title);
         mealBtn.setAttribute("data-bs-content", popUpContent);
-        mealBtn.setAttribute("data-bs-trigger", "focus");
         mealButtons.appendChild(mealBtn);
     }
     // function to create the pop-up when clicking the mealBtns
@@ -57,10 +56,13 @@ fetch (recipeQueryURL, {
     console.log(data[0].ingredients);
     console.log(data[0].instructions);
 });
+
+
 });
 };
             
 // fetch call for nutritional value of the selected meal
+
 function nutritionAPI(userInput) {
     var nutritionQueryURL = "https://api.api-ninjas.com/v1/nutrition?query=" + userInput;
     fetch (nutritionQueryURL, {
@@ -69,6 +71,9 @@ function nutritionAPI(userInput) {
     .then (function (response) {
         return response.json()
     .then (function (nutrition) {
+
+        nutritionEl.innerHTML= 
+        "Nutritional Value: ";
         for (var i = 0; i , i < nutrition.length; i++) {
             var nutrish = document.createElement("p");
             nutrish.textContent = `${nutrition[i].name} Calories: ${nutrition[i].calories} Carbs: ${nutrition[i].carbohydrates_total_g}grams Total Fat: ${nutrition[i].fat_total_g}grams Protein: ${nutrition[i].protein_g} Serving Size: ${nutrition[i].serving_size_g}grams`;
