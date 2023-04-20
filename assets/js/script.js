@@ -28,7 +28,7 @@ fetch (recipeQueryURL, {
     }
     console.log(data);
     for (var i = 0; i < data.length; i++) {
-        var popUpContent = data[i].ingredients + "\n" + data[i].instructions;
+        var popUpContent = data[i].ingredients + data[i].instructions;
         var mealBtn = document.createElement("button");
         mealBtn.textContent = data[i].title;
         mealBtn.type = "button";
@@ -36,7 +36,6 @@ fetch (recipeQueryURL, {
         mealBtn.setAttribute("data-bs-toggle", "popover");
         mealBtn.setAttribute("data-bs-title", data[i].title);
         mealBtn.setAttribute("data-bs-content", popUpContent);
-        mealBtn.setAttribute("data-bs-trigger", "focus");
         mealButtons.appendChild(mealBtn);
     }
     // function to create the pop-up when clicking the mealBtns
@@ -49,19 +48,12 @@ fetch (recipeQueryURL, {
     };
     popUp();
 
-    // function to make the pop-up disappear when something else is clicked
-    var popover = new bootstrap.Popover('.popover-dismiss', {
-        trigger: 'focus'
-      })
-      popover();
-
     console.log(data[0].ingredients);
     console.log(data[0].instructions);
 });
+
+
 });
-
-
-
 
 // fetch call for nutritional value of the selected meal
 fetch (nutritionQueryURL, {
