@@ -30,4 +30,15 @@
     border-style: solid;
     color: rgb(13, 51, 70) ;
     background-color: #e3f2fd;
+    padding: 1vb;
+}
+
+.custom-popup {
+    --bs-popover-max-width: 600px;
+    --bs-popover-border-color: var(--bs-primary);
+    --bs-popover-header-bg: var(--bs-primary);
+    --bs-popover-header-color: var(--bs-white);
+    --bs-popover-body-padding-x: 1rem;
+    --bs-popover-body-padding-y: .5rem;
+    white-space: pre-wrap; 
 }
